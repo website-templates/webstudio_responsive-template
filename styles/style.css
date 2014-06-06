@@ -132,9 +132,9 @@ input[type=submit] {
   cursor: pointer;
 }
 /* =========================================================
-   orlovmax.com less elements library v1.0
+   orlovmax.com less elements library v1.1
    ===================================
-   More info at http://orlovmax.com/lab/lesselements
+   More info at https://github.com/orlovmax/less-elements
    ========================================================= */
 .hidentext {
   text-indent: 100%;
@@ -151,6 +151,7 @@ input[type=submit] {
 }
 /* =========================================================
    Fluid grid system for less css
+   More at https://github.com/orlovmax/fluid-less-grid
    ========================================================= */
 /* Clearfix hack */
 .clear {
@@ -228,7 +229,7 @@ nav .hdr_link {
 }
 .promo {
   width: 100%;
-  background: url("../img/slider-bg.jpg") 0 0 no-repeat;
+  background: url("../img/slider-bg.jpg") center 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -403,7 +404,7 @@ label[for=button-three] {
   background: -ms-linear-gradient(top, #e5e5e5, #ffffff);
   background: -o-linear-gradient(top, #e5e5e5, #ffffff);
   background: linear-gradient(top, #e5e5e5, #ffffff);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5e5e5, endColorstr=#ffffff);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0);
 }
 .choice {
   float: left;
@@ -522,7 +523,7 @@ input[type=submit] {
   background: -ms-linear-gradient(top, #ffffff, #f1f1f1);
   background: -o-linear-gradient(top, #ffffff, #f1f1f1);
   background: linear-gradient(top, #ffffff, #f1f1f1);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#f1f1f1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#ffffff', GradientType=0);
 }
 .request_btn:hover,
 input[type=submit]:hover {
@@ -534,7 +535,7 @@ input[type=submit]:hover {
   background: -ms-linear-gradient(bottom, #ffffff, #f1f1f1);
   background: -o-linear-gradient(bottom, #ffffff, #f1f1f1);
   background: linear-gradient(bottom, #ffffff, #f1f1f1);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#f1f1f1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#ffffff', GradientType=0);
 }
 .news {
   position: relative;
@@ -558,7 +559,7 @@ input[type=submit]:hover {
   background: -ms-linear-gradient(top, #ffffff, #f0f0f0);
   background: -o-linear-gradient(top, #ffffff, #f0f0f0);
   background: linear-gradient(top, #ffffff, #f0f0f0);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#f0f0f0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#ffffff', GradientType=0);
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   -ms-transition: all 0.5s ease 0s;
@@ -589,7 +590,7 @@ footer {
   background: -ms-linear-gradient(top, #100e16, #262330);
   background: -o-linear-gradient(top, #100e16, #262330);
   background: linear-gradient(top, #100e16, #262330);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#100e16, endColorstr=#262330);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#262330', endColorstr='#100e16', GradientType=0);
   clear: both;
 }
 footer:before,
@@ -669,7 +670,7 @@ footer:after {
 /* =========================================================
    Media queries
    ========================================================= */
-@media (max-width: 980px) {
+@media screen and (max-width: 980px) {
   .testimonials {
     padding-bottom: 30px;
     float: left;
@@ -693,7 +694,7 @@ footer:after {
     margin: 0% 1%;
   }
 }
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .slide_info {
     width: 100%;
     margin-bottom: 10px;
@@ -710,7 +711,7 @@ footer:after {
     text-align: center;
   }
 }
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   h2 {
     text-align: center;
   }

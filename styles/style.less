@@ -1,6 +1,6 @@
-@import "reset.less";
-@import "elements.less"; 
-@import "fluid-gs.less";  
+@import "../../../global/styles/reset.less";
+@import "../../../global/styles/elements.less"; 
+@import "../../../global/styles/fluid-gs.less"; 
 	
 /* =========================================================
    Custom styles
@@ -58,7 +58,7 @@ header{
 		
 .promo{	
 	width: 100%;
-	background: url("../img/slider-bg.jpg") 0 0 no-repeat;
+	background: url("../img/slider-bg.jpg") center 0 no-repeat;
 	
 	.bg-cover;
 }	
@@ -94,9 +94,9 @@ header{
 		width: 100%;
 		height: 340px;
 		margin: 10px auto 0;
-		background-color: #0e0e16;	
+		background-color: #0e0e16;		
 		overflow: hidden;		
-		
+			
 		.border-radius(10px,10px,0,0);	
 		.box-shadow(0, 0, 0, 10px, rgba(0,0,0, 0.3));
 		.clearfix;
@@ -379,7 +379,7 @@ footer{
 /* =========================================================
    Media queries
    ========================================================= */			
-@media (max-width:980px){
+@media screen and (max-width:980px){
 	.testimonials{
 		padding-bottom: 30px;
 		.column(1,1,1);
@@ -395,7 +395,7 @@ footer{
 		.column(1,2,1);	
 	}
 }	
-@media (max-width:800px){
+@media screen and (max-width:800px){
 	.slide_info{
 		width: 100%;
 		margin-bottom: 10px;
@@ -414,7 +414,7 @@ footer{
 	}	
 }	
 
-@media (max-width:640px){
+@media screen and (max-width:640px){
 	h2{
 		text-align: center;
 	}

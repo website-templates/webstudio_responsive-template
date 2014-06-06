@@ -2,7 +2,7 @@ Free webstudio responsive website template
 ======
 Nice website template with main content 1024px max-width
 ###### Powered by html5, css3 and less css. Also used simple-gs - [fluid less grid](https://github.com/orlovmax/fluid-less-grid)
-###### Compatible Browsers: IE9+, Firefox, Chrome, Opera, Safari, Yandex.browser
+###### Compatible Browsers: IE8+, Firefox, Chrome, Opera, Safari, Yandex.browser
 
 Demo
 ------
