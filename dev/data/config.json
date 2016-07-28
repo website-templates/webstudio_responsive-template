@@ -1,0 +1,23 @@
+{
+	"site": {
+		"lang": "en",
+		"title": "Webstudio responsive template",
+		"titleDelim": " | ",
+		"description": "Free webstudio responsive website template",
+		"keywords": "html template, theme, freebie, opensource",
+		"url": "http://website-templates.github.io/webstudio_responsive-template"
+	},
+	"modules": {
+		"googleFonts": "https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic",
+		"bodyJs": false,
+		"headJs": false,
+		"customCss": true,
+		"noscriptCss": false,
+		"twitterCard": false,
+		"openGraph": false
+	},
+	"links": {
+		"twitterCardCreator": "===twittercard-creator-account===",
+		"twitterCardAccount": "===twittercard-main-account==="
+	}
+}

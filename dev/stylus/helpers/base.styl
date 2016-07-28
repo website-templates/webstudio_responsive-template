@@ -1,0 +1,50 @@
+////////////////////////////////////////
+// Common styles
+////////////////////////////////////////
+
+////////////////////////////////////////Variables
+// Colors
+$c-selection_text = $c-dark
+$c-selection_bg = $c-light
+
+//////////////////////////////////////// Mixins and functions
+
+
+//////////////////////////////////////// Styles
+
+*:selection
+	background $c-selection_bg
+	color $c-selection_text
+
+*::-moz-selection
+	background $c-selection_bg
+	color $c-selection_text
+
+
+body
+	font-family "Open Sans", sans-serif
+	font-size 14px
+	color #d7d7d7
+
+
+p
+	color #5b5b5b
+	line-height 1.1
+
+
+h2
+	font-size 24px
+	font-weight normal
+
+
+a
+	text-decoration none
+
+	&:hover
+		text-decoration underline
+
+
+.container
+	max-width 1024px
+	margin 0 auto
+	clearfix()

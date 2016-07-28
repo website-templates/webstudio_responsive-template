@@ -1,40 +1,164 @@
-#Free webstudio responsive website template
-Nice website template with main content 1024px max-width
-###### Powered by html5, css3 and less css. Also used simple-gs - [fluid less grid](https://github.com/orlovmax/fluid-less-grid)
-###### Compatible Browsers: IE8+, Firefox, Chrome, Opera, Safari, Yandex.browser
+# Webstudio responsive website template - ARCHIVED
 
-## Quick start
-Actually this example is ready to use (build version), all dependencies already installed. But for further development you should use grunt and bower, see more details about installation grunt [here](https://github.com/orlovmax/front-end-scaffold#how-to-start) and about bower [here](https://github.com/orlovmax/front-end-scaffold#bower)
+Nice website template coded by [Maxim Orlov](https://github.com/orlovmax). 
 
-To compile this project, please run the following:
-
-* `npm install` - install grunt packages
-* `bower install` - install dependencies
-    - `grunt bower-dev` - compile dependencies and remove bower_components folder
-* `grunt` - default task, compile project files
-
-To create build version, please run build task:
-* `grunt build`
-
-### Structure
-This project based on [frontend-scaffold](https://github.com/orlovmax/front-end-scaffold):
-
-`/dev/` folder - contains source code.
-
-`/build/` folder - contain ready-to-use build version.
-
-##Demo
-You can see live demo here: [http://orlovmax.com/freebies/webstudio_website-template](http://orlovmax.com/freebies/webstudio_website-template "webstudio responsive website live demo")
-
-Please note
----
-In reset.css most of elements `box-sizing` sets to `border-box`. 
-
-##Screenshots
-**You can see more screenshots [here](screenshots/)**
+Demo: [http://website-templates.github.io/webstudio_responsive-template](http://website-templates.github.io/webstudio_responsive-template/)
 
 ![Mockup demo](screenshots/pic.jpg)
 Product mockup created with [http://frame.lab25.co.uk/](http://frame.lab25.co.uk/)
 
+## Contents
+* [Folder structure](#folder-and-file-structure)
+* [Requirements](#requirements)
+	- [Editorconfig](#editorconfig)
+* [Site configuration](#site-configuration)
+* [Tasks](#tasks)
+	- [Start](#start)
+	- [Dev](#dev)
+	- [Build](#build)
+	- [Rebuild](#rebuild)
+	- [Server](#server)
+* [Live reload](#live-reload)
+* [License](#license)
+
+## Folder and file structure
+```
+./
+├── .editorconfig
+├── README.md
+|
+├── gulp_tasks/                                * gulp tasks
+|   ├── config/                                * gulp tasks config
+│   |	├── paths.js
+│   |	├── settings.js
+│   |	└── aliases.js
+│   |
+|   └── task.js
+│
+├── gulpfile.js
+├── package.json
+|
+├── screenshots/                               * responsive test screenshots
+|
+├── dev/                                       * site source
+|   ├── coffee/                                * coffee scripts
+|	│
+│   ├── images/                                * image sources
+|	│
+│   ├── pug/                                   * templates
+|	|	├── blocks/                            * blocks library
+|	│   |   └── block.pug
+|	│   ├── helpers/                           * helper mixins
+|	│   ├── vendor/                            * third-party code
+|	│   ├── layouts/                           * page layouts
+|	│   └── pages/                             * main pages templates
+|	│
+│   ├── js/                                    * compiled and source js
+|	|   ├── vendor/                            * vendor scripts library
+|	|   ├── lib/                               * site scripts library
+|	│   ├── head.js                            * head scripts
+|	│   └── body.js                            * vendor scripts
+|	│
+|	├── stylus/                                * stylus preprocessor styles
+|	|	├── blocks/                            * blocks library
+|	│   |   └── block.styl
+|	│   ├── helpers/                           * mixins and vars
+|	│   ├── vendor/                            * third-party code
+|	│   ├── custom.styl
+|	│   ├── noscript.styl
+|	│   └── screen.styl
+|	│
+│   ├── helpers/                               * helper files
+|	|	├── favicon.ico
+|	|	└── .htaccess
+|	│
+│   ├── fonts/                                 * font sources
+|	│
+│   └── data/                                  * configs and data for templates
+│
+└── build/                                     * built source
+	├── index.html
+	├── page.html
+	|
+	└── static/                                * static assets
+		├── css/                               * minified styles
+		|
+		├── images/                            * minified images
+		│
+		├── js/                                * minified assembled js
+		|
+		└── fonts/                             * @font-face-ready webfonts
+
+```
+
+## Requirements:
+- [Node.js](http://nodejs.org/)
+- Build sytem: [Gulp](http://gulpjs.com/)
+- Optionally: [Editorconfig](http://editorconfig.org/)
+
+#### Editorconfig
+This project have .editorconfig file at the root that used by your code editor with editorconfig plugin. It describes codestyle like indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/)
+
+## Site configuration
+This boilerplate use Pug templates with external data configs. 
+Main settings can be found in `dev/data/config.json` file. And they're available for usage in templates with `config.key-name`
+
+## Tasks
+Here comes groups of grunt and gulp tasks with some explanations
+
+#### Start 
+Install bower dependencies and place them to dev folders.
+Gulp: `gulp start`
+
+* Install bower components
+* Remove gitkeep files
+
+#### Dev
+Dev task with static server.
+Gulp: `gulp dev`
+
+* Compile Stylus stylesheets
+* Add vendor prefixes in css
+* Combine media queries in css files
+* Compile Pug templates
+* Sync helpers and other assets
+* Sync images
+* Run BrowserSync static server with live reload using 
+* Watch for changes and run dev task
+
+
+#### Build 
+Build task.
+Gulp: `gulp build`
+
+* Minify images
+* Minify stylesheets
+* Minify html
+* Run BrowserSync static server 
+
+
+#### Rebuild 
+Regenerate and build project by running all tasks.
+Gulp: `gulp rebuild`
+
+* Compile Stylus stylesheets
+* Add vendor prefixes in css
+* Combine media queries in css files
+* Compile Pug templates
+* Sync helpers and other assets
+* Sync images
+* Minify images
+* Minify stylesheets
+* Minify html
+
+#### Server 
+Run server without watching for changes.
+Gulp: `gulp server`
+
+* Run BrowserSync static server
+
+## Live reload 
+This project uses BrowserSync as static server with enabled and configured live reload option.
+
 ## License
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](https://github.com/website-templates/charity_responsive-template/blob/master/LICENSE.md)
