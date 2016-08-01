@@ -1,22 +1,38 @@
-header
+.page-header
 	width 100%
 	min-height 35px
 	padding-top 10px
 	background-color #0f0e16
 	border-bottom 1px solid rgba(255,255,255, .5)
 
-	nav
-		float left
-		margin-left 20px
+	&__inner
+		max-width 1024px
+		margin 0 auto
+		clearfix()
 
-		.hdr_link
-			margin-right 50px
 
-	.sign
-		float right
-		margin-right 20px
+.page-nav
+	float left
+	margin-left 20px
 
-	.hdr_link
+	&__inner
+		max-width 1024px
+		margin 0 auto
+		clearfix()
+
+	&__link
+		display inline-block
+		margin-right 50px
+		color #d7d7d7
+		text-transform uppercase
+		font-weight bold
+
+
+.actions
+	float right
+	margin-right 20px
+
+	&__link
 		display inline-block
 		color #d7d7d7
 		text-transform uppercase
@@ -28,353 +44,397 @@ header
 	background url("../images/slider-bg.jpg") center 0 no-repeat
 	background-size cover
 
-	.promo_header
+	&__inner
+		max-width 1024px
+		margin 0 auto
+		clearfix()
+
+	&__header
 		min-height 140px
 		padding-top 20px
 		clearfix()
 
-		.logo
-			float left
-			width 280px
-			height 50px
-			margin 30px 0 0 30px
-			background url("../images/logo.png") 0 0 no-repeat
+	&__logo
+		float left
+		margin 30px 0 0 30px
 
-			.slogan
-				display block
-				text-align right
-				padding-top 35px
-				font-size 13px
-				color #0e0e16
+	&__proposal
+		float right
+		width 45%
+		height 90px
+		margin-right 30px
+		background-color rgba(255,255,255, 0.1)
+		border 1px solid rgba(238,200,170, 0.3)
 
-		.proposal
-			float right
-			width 45%
-			height 90px
-			margin-right 30px
-			background-color rgba(255,255,255, 0.1)
-			border 1px solid rgba(238,200,170, 0.3)
 
-	.slider
-		position relative
+
+.logo
+	width 280px
+	height 50px
+	background url("../images/logo.png") 0 0 no-repeat
+
+	&__text
+		display block
+		text-align right
+		padding-top 35px
+		font-size 13px
+		color #0e0e16
+
+
+.slider
+	position relative
+	width 100%
+	height 340px
+	margin 10px auto 0
+	background-color #0e0e16
+	overflow hidden
+	border-radius 10px 10px 0 0
+	box-shadow 0 0 0 10px rgba(0,0,0, 0.3)
+	clearfix()
+
+	&__radio
+		display none
+
+	&__control
+		position absolute
+		right 10px
+		top 45%
+		z-index 100
+		width 13px
+		height 13px
+		background-color rgba(255,255,255,.8)
+		cursor pointer
+		border-radius 50%
+		box-shadow inset 1px 1px 2px 0 rgba(0,0,0,.8)
+		transition background-color .5s
+
+		&[for=button-one]
+			margin-top -25px
+
+		&[for=button-three]
+			margin-top 25px
+
+	#button-one:checked~label[for=button-one]
+		background-color rgba(100,100,100,1)
+
+	#button-two:checked~label[for=button-two]
+		background-color rgba(100,100,100,1)
+
+	#button-three:checked~label[for=button-three]
+		background-color rgba(100,100,100,1)
+
+	#button-one:checked~.slider__items
+		margin-top 0
+
+	#button-two:checked~.slider__items
+		margin-top -340px
+
+	#button-three:checked~.slider__items
+		margin-top -680px
+
+	&__items
+		width 100%
+		transition all, .5s
+
+	&__item
 		width 100%
 		height 340px
-		margin 10px auto 0
-		background-color #0e0e16
-		overflow hidden
-		border-radius 10px 10px 0 0
-		box-shadow 0 0 0 10px rgba(0,0,0, 0.3)
+		padding 25px 35px 0 25px
 		clearfix()
 
-		.slider_radio
-			display none
+	&__item-info
+		float left
+		width 50%
 
-		.slider_control
-			position absolute
-			right 10px
-			top 45%
-			z-index 100
-			width 13px
-			height 13px
-			background-color rgba(255,255,255,.8)
-			cursor pointer
-			border-radius 50%
-			box-shadow inset 1px 1px 2px 0 rgba(0,0,0,.8)
-			transition background-color .5s
+	&__item-title
+		font-size 24px
+		color #e5e5e5
+		font-weight bold
 
-			&[for=button-one]
-				margin-top -25px
+	&__item-date
+		color #2a2a3e
+		font-weight bold
+		margin-top 10px
 
-			&[for=button-three]
-				margin-top 25px
+	&__item-text
+		color #87878b
+		margin-top 12px
 
-		#button-one:checked~label[for=button-one]
-			background-color rgba(100,100,100,1)
+	&__item-image
+		float right
+		width 47%
+		margin-right 3%
+		text-align center
 
-		#button-two:checked~label[for=button-two]
-			background-color rgba(100,100,100,1)
+		& img
+			max-height 230px
+			overflow hidden
 
-		#button-three:checked~label[for=button-three]
-			background-color rgba(100,100,100,1)
+		& figcaption
+			display block
+			text-align right
 
-		#button-one:checked~.slider_inner
-			margin-top 0
-
-		#button-two:checked~.slider_inner
-			margin-top -340px
-
-		#button-three:checked~.slider_inner
-			margin-top -680px
+		& a
+			color #018af4
 
 
-		.slider_inner
-			width 100%
-			transition all, .5s
-
-			.slide
-				width 100%
-				height 340px
-				padding 25px 35px 0 25px
-				clearfix()
-
-				.slide_info
-					float left
-					width 50%
-
-					.slide_title
-						font-size 24px
-						color #e5e5e5
-						font-weight bold
-
-					.slide_date
-						color #2a2a3e
-						font-weight bold
-						margin-top 10px
-
-					.slide_text
-						color #87878b
-						margin-top 12px
-
-				.slide_image
-					float right
-					width 47%
-					margin-right 3%
-					text-align center
-
-					& img
-						max-height 230px
-						overflow hidden
-
-					& figcaption
-						display block
-						text-align right
-
-					& a
-						color #018af4
-
-
-.main-content
+.page-content
 	position relative
 	padding 30px 0
 	color:#000
 	background-image: linear-gradient(to bottom, #e5e5e5, #fff)
 
-	.choice
-		gs-column(1,1,1%)
-		margin-bottom 20px
+	&__inner
+		max-width 1024px
+		margin 0 auto
+		clearfix()
 
-		.main_title
-			padding-bottom 12px
-			margin-bottom 15px
-			border-width 0
+
+.choice
+	gs-column(1,1,1%)
+	margin-bottom 20px
+
+	&__title
+		padding-bottom 12px
+		margin-bottom 15px
+		border-width 0
+		border-bottom 1px solid #d2d2d2
+
+
+.testimonials
+	gs-column(1,2,1%)
+
+	&__title
+		padding-bottom 12px
+		margin-bottom 15px
+		border-width 0
+		border-bottom 1px solid #d2d2d2
+
+	&__list
+		list-style none
+
+	&__item
+		clearfix()
+
+		&:not(:last-child)
+			padding-bottom 10px
+			margin-bottom 10px
 			border-bottom 1px solid #d2d2d2
 
-	.testimonials
-		gs-column(1,2,1%)
-
-		.comment
-			clearfix()
-
-			&:not(:last-child)
-				padding-bottom 10px
-				margin-bottom 10px
-				border-bottom 1px solid #d2d2d2
-
-			& img
-				float left
-				border 5px solid #fff
-				margin-right 10px
+	&__avatar
+		float left
+		border 5px solid #fff
+		margin-right 10px
 
 
-		    & p
-				font-style italic
-				padding-left 110px
+	 &__text
+		font-style italic
+		padding-left 110px
 
-				&:last-child
-					font-weight bold
-					margin-top 10px
-
-
-
-	.projects
-		gs-column(1,2,1%)
-
-		.project
-			display inline-block
-			width 101px
-			height 101px
-			background url("../images/more_projects-sprite.jpg") 0 0 no-repeat
-			margin-bottom 10px
-			margin-right 3%
-			font-size 0
-			color transparent
-			transition all, .5s
-
-			&:hover
-				transform: scale(1.2)
-
-
-			&:last-child
-				margin-right 0
-
-			&.first
-				background-position 0 0
-
-			&.second
-				background-position -102px 0
-
-			&.third
-				background-position -204px 0
-
-			&.fourth
-				background-position -306px 0
-
-
-	.request
-		position relative
-		min-height 220px
-		gs-column(1,4,1%)
-
-		.request_btn
-			display block
-			position absolute
-			width 100%
-			height 60px
-			bottom 0
-			margin-top 15px
-			border 10px solid #e6e6e6
-			cursor pointer
-			color #018af4
-			font-size 13px
-			line-height 35px
+		&:last-child
 			font-weight bold
-			text-align center
-
-			background-image: linear-gradient(to bottom, #fff, #f1f1f1)
-
-			&:hover
-				text-decoration none
-
-				background-image: linear-gradient(to top, #fff, #f1f1f1)
+			margin-top 10px
 
 
-	.news
-		position relative
-		min-height 220px
-		gs-column(1,4,1%)
+.projects
+	gs-column(1,2,1%)
 
-		& input[type=email]
-			width 100%
-			height 32px
-			margin-top 14px
-			border 1px solid #e5e5e5
-			border-radius 5px
-			background-image: linear-gradient(to bottom, #fff, #f0f0f0)
-			transition all, .5s
+	&__title
+		padding-bottom 12px
+		margin-bottom 15px
+		border-width 0
+		border-bottom 1px solid #d2d2d2
 
-			&:hover
-				box-shadow inset 0 0 1px 0 #018af4
+	&__link
+		display inline-block
+		width 101px
+		height 101px
+		background url("../images/more_projects-sprite.jpg") 0 0 no-repeat
+		margin-bottom 10px
+		margin-right 3%
+		font-size 0
+		color transparent
+		transition all, .5s
 
-		& input[type=submit]
-			display block
-			position absolute
-			width 100%
-			height 60px
-			bottom 0
-			margin-top 15px
-			border 10px solid #e6e6e6
-			cursor pointer
-			color #018af4
-			font-size 13px
-			line-height 35px
-			font-weight bold
-			text-align center
-			background-image: linear-gradient(to bottom, #fff, #f1f1f1)
+		&:hover
+			transform: scale(1.2)
 
-			&:hover
-				text-decoration none
-				background-image: linear-gradient(to top, #fff, #f1f1f1)
+		&:last-child
+			margin-right 0
 
+		&_first
+			background-position 0 0
 
-		& input[type=email]::placeholder,
-		& input[type=email]::-moz-placeholder,
-		& input[type=email]::-webkit-input-placeholder
-			font-size 13px
-			color #cccccc
+		&_second
+			background-position -102px 0
+
+		&_third
+			background-position -204px 0
+
+		&_fourth
+			background-position -306px 0
 
 
+.request
+	position relative
+	min-height 220px
+	gs-column(1,4,1%)
 
-footer
+	&__title
+		padding-bottom 12px
+		margin-bottom 15px
+		border-width 0
+		border-bottom 1px solid #d2d2d2
+
+	&__btn
+		display block
+		position absolute
+		width 100%
+		height 60px
+		bottom 0
+		margin-top 15px
+		border 10px solid #e6e6e6
+		cursor pointer
+		color #018af4
+		font-size 13px
+		line-height 35px
+		font-weight bold
+		text-align center
+
+		background-image: linear-gradient(to bottom, #fff, #f1f1f1)
+
+		&:hover
+			text-decoration none
+
+			background-image: linear-gradient(to top, #fff, #f1f1f1)
+
+
+.news
+	position relative
+	min-height 220px
+	gs-column(1,4,1%)
+
+	& input[type=email]
+		width 100%
+		height 32px
+		margin-top 14px
+		border 1px solid #e5e5e5
+		border-radius 5px
+		background-image: linear-gradient(to bottom, #fff, #f0f0f0)
+		transition all, .5s
+
+		&:hover
+			box-shadow inset 0 0 1px 0 #018af4
+
+	& input[type=submit]
+		display block
+		position absolute
+		width 100%
+		height 60px
+		bottom 0
+		margin-top 15px
+		border 10px solid #e6e6e6
+		cursor pointer
+		color #018af4
+		font-size 13px
+		line-height 35px
+		font-weight bold
+		text-align center
+		background-image: linear-gradient(to bottom, #fff, #f1f1f1)
+
+		&:hover
+			text-decoration none
+			background-image: linear-gradient(to top, #fff, #f1f1f1)
+
+
+	& input[type=email]::placeholder,
+	& input[type=email]::-moz-placeholder,
+	& input[type=email]::-webkit-input-placeholder
+		font-size 13px
+		color #cccccc
+
+
+.page-footer
 	color #fff
 	font-weight bold
 	font-size 12px
 	border-top 1px solid #000
 	padding 20px 0 45px 15px
-
 	background-image: linear-gradient(to bottom, #100e16, #262330)
 	clearfix()
 
-	.copyright
+	&__inner
+		max-width 1024px
+		margin 0 auto
+		clearfix()
+
+	&__copyright
 		line-height 1.2
 		float left
 
-	.social
-		float right
 
-		.social span
-			vertical-align top
+.social
+	float right
 
-		.icon
-			display inline-block
-			width 20px
-			height 20px
-			margin-right 3px
-			background url("../images/soc-sprite.png") 0 0 no-repeat
+	&__title
+		vertical-align top
 
-			font-size 0
-			color transparent
-			.rotate(15deg)
+	&__list
+		list-style none
 
-			&.fb
-				background-position 0 0
-				&:hover
-					background-position 0 -20px
+	&__item
+		display inline-block
 
+	&__link
+		display block
+		width 20px
+		height 20px
+		margin-right 3px
+		background url("../images/soc-sprite.png") 0 0 no-repeat
+		font-size 0
+		color transparent
+		.rotate(15deg)
 
-			&.tw
-				background-position -20px 0
-				&:hover
-					background-position -20px -20px
-
-
-			&.gplus
-				background-position -40px 0
-				&:hover
-					background-position -40px -20px
+		&_fb
+			background-position 0 0
+			&:hover
+				background-position 0 -20px
 
 
-			&.in
-				background-position -60px 0
-				&:hover
-					background-position -60px -20px
+		&_tw
+			background-position -20px 0
+			&:hover
+				background-position -20px -20px
 
 
-			&.rss
-				background-position -80px 0
-				&:hover
-					background-position -80px -20px
+		&_gplus
+			background-position -40px 0
+			&:hover
+				background-position -40px -20px
 
 
-			&.fl
-				background-position -100px 0
-				&:hover
-					background-position -100px -20px
+		&_in
+			background-position -60px 0
+			&:hover
+				background-position -60px -20px
 
 
-			&.you
-				background-position -120px 0
-				&:hover
-					background-position -120px -20px
+		&_rss
+			background-position -80px 0
+			&:hover
+				background-position -80px -20px
+
+
+		&_fl
+			background-position -100px 0
+			&:hover
+				background-position -100px -20px
+
+
+		&_you
+			background-position -120px 0
+			&:hover
+				background-position -120px -20px
 
 
 
@@ -395,15 +455,15 @@ footer
 
 
 @media screen and (max-width:800px)
-	.slide_info
+	.slider__item-info
 		width 100%
 		margin-bottom 10px
 		text-align center
 
-		.slide_text
-			display none
+	.slider__item-text
+		display none
 
-	.slide_image
+	.slider__item-image
 		width 100%
 		margin-right 0
 
@@ -427,16 +487,16 @@ footer
 		width 90%
 		margin 10px auto 20px
 
-	.slide
+	.slider__item
 		padding-top 10px
 
-	footer
+	.page-footer
 		text-align center
 
-		.copyright
-			float none
-			margin-bottom 10px
+	.copyright
+		float none
+		margin-bottom 10px
 
-		.social
-			float none
+	.social
+		float none
 
