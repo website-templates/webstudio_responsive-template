@@ -166,17 +166,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-.container {
-	max-width: 1024px;
-	margin: 0 auto;
-}
-
-.container:after {
-	content: '';
-	display: table;
-	clear: both;
-}
-
 .page-header {
 	width: 100%;
 	min-height: 35px;
