@@ -1,0 +1,29 @@
+////////////////////////////////////////
+// $Logo
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".logo"
+
+{$block}
+	width 280px
+	height 50px
+	background url("../images/logo.png") 0 0 no-repeat
+
+	@media screen and (max-width:640px)
+		float none
+		margin 30px auto 0
+
+	// $Logo text
+	&__text
+		display block
+		text-align right
+		padding-top 35px
+		font-size 13px
+		color #0e0e16
