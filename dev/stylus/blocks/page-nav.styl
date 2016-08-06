@@ -1,0 +1,33 @@
+////////////////////////////////////////
+// $Page navigation
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".page-nav"
+
+{$block}
+	float left
+	margin-left 20px
+
+	// $Page navigation inner container
+	&__inner
+		max-width 1024px
+		margin 0 auto
+		clearfix()
+
+	// $Page navigation link
+	&__link
+		display inline-block
+		margin-right 50px
+		color #d7d7d7
+		text-transform uppercase
+		font-weight bold
+
+		@media screen and (max-width:640px)
+			margin-right 20px
