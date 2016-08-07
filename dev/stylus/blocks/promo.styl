@@ -1,0 +1,52 @@
+////////////////////////////////////////
+// $Promo
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".promo"
+
+{$block}
+	width 100%
+	background url("../images/slider-bg.jpg") center 0 no-repeat
+	background-size cover
+
+
+	// $Promo inner container
+	&__inner
+		max-width 1024px
+		margin 0 auto
+		clearfix()
+
+
+	// $Promo header
+	&__header
+		min-height 140px
+		padding-top 20px
+		clearfix()
+
+
+	// $Promo logo
+	&__logo
+		float left
+		margin 30px 0 0 30px
+
+
+	// $Promo proposal
+	&__proposal
+		float right
+		width 45%
+		height 90px
+		margin-right 30px
+		background-color rgba(255,255,255, 0.1)
+		border 1px solid rgba(238,200,170, 0.3)
+
+		@media screen and (max-width:640px)
+			float none
+			width 90%
+			margin 10px auto 20px

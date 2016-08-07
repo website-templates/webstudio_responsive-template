@@ -23,13 +23,19 @@ $block = ".page-footer"
 	@media screen and (max-width:640px)
 		text-align center
 
+
 	// $Page footer inner container
 	&__inner
 		max-width 1024px
 		margin 0 auto
 		clearfix()
 
+
 	// $Page footer copyright
 	&__copyright
 		line-height 1.2
 		float left
+
+		@media screen and (max-width:640px)
+			float none
+			margin-bottom 10px

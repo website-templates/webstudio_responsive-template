@@ -1,0 +1,62 @@
+////////////////////////////////////////
+// $Projects
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".projects"
+
+{$block}
+	gs-column(1,2,1%)
+
+	@media screen and (max-width:980px)
+		gs-column(1,1,1%)
+		text-align center
+
+
+	// $Projects title
+	&__title
+		padding-bottom 12px
+		margin-bottom 15px
+		border-width 0
+		border-bottom 1px solid #d2d2d2
+
+
+	// $Projects link
+	&__link
+		display inline-block
+		width 101px
+		height 101px
+		background url("../images/more_projects-sprite.jpg") 0 0 no-repeat
+		margin-bottom 10px
+		margin-right 3%
+		font-size 0
+		color transparent
+		transition all, .5s
+
+		&:hover
+			transform: scale(1.2)
+
+		&:last-child
+			margin-right 0
+
+		// $Projects link MOD: first project
+		&_first
+			background-position 0 0
+
+		// $Projects link MOD: second project
+		&_second
+			background-position -102px 0
+
+		// $Projects link MOD: third project
+		&_third
+			background-position -204px 0
+
+		// $Projects link MOD: fourth project
+		&_fourth
+			background-position -306px 0
