@@ -1,0 +1,87 @@
+////////////////////////////////////////
+// $Social
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".social"
+
+{$block}
+	float right
+
+	@media screen and (max-width:640px)
+		float none
+
+
+	// $Social title
+	&__title
+		vertical-align top
+
+
+	// $Social list
+	&__list
+		list-style none
+
+
+	// $Social item
+	&__item
+		display inline-block
+
+
+	// $Social link
+	&__link
+		display block
+		width 20px
+		height 20px
+		margin-right 3px
+		background url("../images/soc-sprite.png") 0 0 no-repeat
+		font-size 0
+		color transparent
+		transform: rotate(15deg)
+
+		// $Social link MOD: facebook
+		&_fb
+			background-position 0 0
+			&:hover
+				background-position 0 -20px
+
+		// $Social link MOD: twitter
+		&_tw
+			background-position -20px 0
+			&:hover
+				background-position -20px -20px
+
+		// $Social link MOD: gplus
+		&_gplus
+			background-position -40px 0
+			&:hover
+				background-position -40px -20px
+
+		// $Social link MOD: linkedin
+		&_in
+			background-position -60px 0
+			&:hover
+				background-position -60px -20px
+
+		// $Social link MOD: rss
+		&_rss
+			background-position -80px 0
+			&:hover
+				background-position -80px -20px
+
+		// $Social link MOD:flickr
+		&_fl
+			background-position -100px 0
+			&:hover
+				background-position -100px -20px
+
+		// $Social link MOD: youtube
+		&_you
+			background-position -120px 0
+			&:hover
+				background-position -120px -20px

@@ -1,0 +1,59 @@
+////////////////////////////////////////
+// $Testimonials
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".testimonials"
+
+{$block}
+	gs-column(1,2,1%)
+
+	@media screen and (max-width:980px)
+		padding-bottom 30px
+		gs-column(1,1,1%)
+
+
+	// $Testimonials title
+	&__title
+		padding-bottom 12px
+		margin-bottom 15px
+		border-width 0
+		border-bottom 1px solid #d2d2d2
+
+
+	// $Testimonials list
+	&__list
+		list-style none
+
+
+	// $Testimonials item
+	&__item
+		clearfix()
+
+		&:not(:last-child)
+			padding-bottom 10px
+			margin-bottom 10px
+			border-bottom 1px solid #d2d2d2
+
+
+	// $Testimonials avatar
+	&__avatar
+		float left
+		border 5px solid #fff
+		margin-right 10px
+
+
+	// $Testimonials text
+	 &__text
+		font-style italic
+		padding-left 110px
+
+		&:last-child
+			font-weight bold
+			margin-top 10px

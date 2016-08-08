@@ -1,0 +1,165 @@
+////////////////////////////////////////
+// $Slider
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block = ".slider"
+
+{$block}
+	position relative
+	width 100%
+	height 340px
+	margin 10px auto 0
+	background-color #0e0e16
+	overflow hidden
+	border-radius 10px 10px 0 0
+	box-shadow 0 0 0 10px rgba(0,0,0, 0.3)
+	clearfix()
+
+	@media screen and (max-width:640px)
+		height 400px
+
+
+	// $Slider radio
+	&__radio
+		display none
+
+
+	// $Slider control
+	&__control
+		position absolute
+		right 10px
+		top 45%
+		z-index 100
+		width 13px
+		height 13px
+		background-color rgba(255,255,255,.8)
+		cursor pointer
+		border-radius 50%
+		box-shadow inset 1px 1px 2px 0 rgba(0,0,0,.8)
+		transition background-color .5s
+
+		// $Slider control label ATTR: button-one label
+		&[for=button-one]
+			margin-top -25px
+
+			// $Slider control label ATTR: button-one label CONTEXT: Slider radio button one STATE: checked
+			{$block}__radio#button-one:checked ~ &
+				background-color rgba(100,100,100,1)
+
+		// $Slider control label ATTR: button-two label
+		&[for=button-two]
+
+			// $Slider control label ATTR: button-two label CONTEXT: Slider radio button two STATE: checked
+			{$block}__radio#button-two:checked ~ &
+				background-color rgba(100,100,100,1)
+
+		// $Slider control label ATTR: button-three label
+		&[for=button-three]
+			margin-top 25px
+
+			// $Slider control label ATTR: button-three label CONTEXT: Slider radio button three STATE: checked
+			{$block}__radio#button-three:checked ~ &
+				background-color rgba(100,100,100,1)
+
+
+	// $Slider items
+	&__items
+		width 100%
+		transition all, .5s
+
+		// $Slider items CONTEXT: Slider radio button one STATE: checked
+		{$block}__radio#button-one:checked ~ &
+			margin-top 0
+
+		// $Slider items CONTEXT: Slider radio button two STATE: checked
+		{$block}__radio#button-two:checked ~ &
+			margin-top -340px
+
+			@media screen and (max-width:640px)
+				margin-top -400px
+
+		// $Slider items CONTEXT: Slider radio button three STATE: checked
+		{$block}__radio#button-three:checked ~ &
+			margin-top -680px
+
+			@media screen and (max-width:640px)
+				margin-top -800px
+
+
+	// $Slider item
+	&__item
+		width 100%
+		height 340px
+		padding 25px 35px 0 25px
+		clearfix()
+
+		@media screen and (max-width:640px)
+			padding-top 10px
+			height 400px
+
+
+	// $Slider item info
+	&__item-info
+		float left
+		width 50%
+
+		@media screen and (max-width:800px)
+			width 100%
+			margin-bottom 10px
+			text-align center
+
+
+	// $Slider item title
+	&__item-title
+		font-size 24px
+		color #e5e5e5
+		font-weight bold
+
+
+	// $Slider item date
+	&__item-date
+		color #2a2a3e
+		font-weight bold
+		margin-top 10px
+
+
+	// $Slider item text
+	&__item-text
+		color #87878b
+		margin-top 12px
+
+		@media screen and (max-width:800px)
+			display none
+
+
+	// $Slider item image
+	&__item-image
+		float right
+		width 47%
+		margin-right 3%
+		text-align center
+
+		@media screen and (max-width:800px)
+			width 100%
+			margin-right 0
+
+		& img
+			max-height 230px
+			overflow hidden
+
+		& figcaption
+			display block
+			text-align right
+
+			@media screen and (max-width:800px)
+				text-align center
+
+		& a
+			color #018af4
