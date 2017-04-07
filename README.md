@@ -29,9 +29,9 @@ Product mockup created with [http://frame.lab25.co.uk/](http://frame.lab25.co.uk
 |
 ├── gulp_tasks/                                * gulp tasks
 |   ├── config/                                * gulp tasks config
-│   |	├── paths.js
-│   |	├── settings.js
-│   |	└── aliases.js
+│   |   ├── paths.js
+│   |   ├── settings.js
+│   |   └── aliases.js
 │   |
 |   └── task.js
 │
@@ -42,52 +42,52 @@ Product mockup created with [http://frame.lab25.co.uk/](http://frame.lab25.co.uk
 |
 ├── dev/                                       * site source
 |   ├── coffee/                                * coffee scripts
-|	│
+|   │
 │   ├── images/                                * image sources
-|	│
+|   │
 │   ├── pug/                                   * templates
-|	|	├── blocks/                            * blocks library
-|	│   |   └── block.pug
-|	│   ├── helpers/                           * helper mixins
-|	│   ├── vendor/                            * third-party code
-|	│   ├── layouts/                           * page layouts
-|	│   └── pages/                             * main pages templates
-|	│
+|   |   ├── blocks/                            * blocks library
+|   │   |   └── block.pug
+|   │   ├── helpers/                           * helper mixins
+|   │   ├── vendor/                            * third-party code
+|   │   ├── layouts/                           * page layouts
+|   │   └── pages/                             * main pages templates
+|   │
 │   ├── js/                                    * compiled and source js
-|	|   ├── vendor/                            * vendor scripts library
-|	|   ├── lib/                               * site scripts library
-|	│   ├── head.js                            * head scripts
-|	│   └── body.js                            * vendor scripts
-|	│
-|	├── stylus/                                * stylus preprocessor styles
-|	|	├── blocks/                            * blocks library
-|	│   |   └── block.styl
-|	│   ├── helpers/                           * mixins and vars
-|	│   ├── vendor/                            * third-party code
-|	│   ├── custom.styl
-|	│   ├── noscript.styl
-|	│   └── screen.styl
-|	│
+|   |   ├── vendor/                            * vendor scripts library
+|   |   ├── lib/                               * site scripts library
+|   │   ├── head.js                            * head scripts
+|   │   └── body.js                            * vendor scripts
+|   │
+|   ├── stylus/                                * stylus preprocessor styles
+|   |   ├── blocks/                            * blocks library
+|   │   |   └── block.styl
+|   │   ├── helpers/                           * mixins and vars
+|   │   ├── vendor/                            * third-party code
+|   │   ├── custom.styl
+|   │   ├── noscript.styl
+|   │   └── screen.styl
+|   │
 │   ├── helpers/                               * helper files
-|	|	├── favicon.ico
-|	|	└── .htaccess
-|	│
+|   |   ├── favicon.ico
+|   |   └── .htaccess
+|   │
 │   ├── fonts/                                 * font sources
-|	│
+|   │
 │   └── data/                                  * configs and data for templates
 │
 └── build/                                     * built source
-	├── index.html
-	├── page.html
-	|
-	└── static/                                * static assets
-		├── css/                               * minified styles
-		|
-		├── images/                            * minified images
-		│
-		├── js/                                * minified assembled js
-		|
-		└── fonts/                             * @font-face-ready webfonts
+    ├── index.html
+    ├── page.html
+    |
+    └── static/                                * static assets
+        ├── css/                               * minified styles
+        |
+        ├── images/                            * minified images
+        │
+        ├── js/                                * minified assembled js
+        |
+        └── fonts/                             * @font-face-ready webfonts
 
 ```
 
@@ -161,4 +161,4 @@ Gulp: `gulp server`
 This project uses BrowserSync as static server with enabled and configured live reload option.
 
 ## License
-[MIT](https://github.com/website-templates/charity_responsive-template/blob/master/LICENSE.md)
+[MIT](https://github.com/website-templates/webstudio_responsive-template/blob/master/LICENSE.md)
